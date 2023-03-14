@@ -3,7 +3,7 @@ class Recipe < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 250 }
   validates :description, presence: true, length: { maximum: 5000 }
-  validates :public, presence: true
+  validates :public, inclusion: { in: [true, false] }
   validates :preparation_time, presence: true,
                                numericality: { greater_than_or_equal_to: 0, message: 'must be a positive number' }
   validates :cooking_time, presence: true,

@@ -35,11 +35,10 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     if @recipe.update_attribute(:public, params[:recipe][:public])
       flash[:success] = 'Recipe visibility updated successfully.'
-      redirect_to @recipe
     else
       flash.now[:error] = 'There was an error updating the recipe Visibility.'
-      redirect_to @recipe
     end
+    redirect_to @recipe
   end
 
   def public_recipes

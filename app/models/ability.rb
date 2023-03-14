@@ -11,6 +11,6 @@ class Ability
     can :create, Recipe if user.persisted?
 
     # allow users to update and destroy their own recipes
-    can [:update, :destroy], Recipe, user_id: user.id
+    can %i[update destroy], Recipe, user_id: user.id
   end
 end

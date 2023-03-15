@@ -1,0 +1,45 @@
+<div class="recipe-section">
+    <% if @recipe.public || @recipe.user == current_user %>
+        <div>
+            <div>
+                <h1>
+                    <%= @recipe.name %>
+                </h1>
+            </div>
+            <div class="recipe-info">
+                <div>
+                    <span>
+                        preparation time: <%= @recipe.preparation_time %> Mins
+                    </span><br>
+                    <span>
+                        Cooking time: <%= @recipe.cooking_time %> Mins
+                    </span><br>
+                    <span>
+                        <%= @recipe.description %>
+                    </span>
+                </div>
+                <div>
+                    <% if can? :update, @recipe %>
+                        <%= form_for @recipe, scope: :recipe, method: :patch do  |f| %>
+                            <div class="form-group">
+                                <%= f.label :public, class: 'control-label' %>
+                                <%= f.check_box :public, {}, 'true', 'false' %>
+                            </div>
+                            <%= f.submit 'Update', class: 'btn btn-primary' %>
+                        <% end %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <div>
+            <% if @recipe.user == current_user %>
+                <%= link_to 'Add new Food', new_food_path %>
+            <% end %>
+        </div>
+    <% else %>
+        <div>
+            <span>You don't have permission to view this recipe</span>
+            <%= link_to 'View all Recipes', public_recipes_path %>
+        </div>
+    <% end %>
+</div>

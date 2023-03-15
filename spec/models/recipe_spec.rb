@@ -29,10 +29,6 @@ RSpec.describe Recipe, type: :model do
     # expect(Recipe.public_recipes_ordered_by_newest.count).to eq(1)
   end
 
-  it 'should return only Recipes with the public attibute set to true' do
-    # expect(Recipe.public_recipes_ordered_by_newest.count).to eq(1)
-  end
-
   it 'should return only Recipes created by the current user' do
     @recipes = Recipe.created_by_current_user(current_user)
     current_user_id = @recipes.first.user.id

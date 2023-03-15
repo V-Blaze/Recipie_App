@@ -4,7 +4,7 @@ RSpec.describe 'Recipes', type: :request do
   describe 'GET /index' do
     before do
       current_user = User.first
-      current_user.confirm if current_user.confirmed_at == nil
+      current_user.confirm if current_user.confirmed_at.nil?
       sign_in current_user
       get '/recipes'
     end
@@ -21,7 +21,7 @@ RSpec.describe 'Recipes', type: :request do
   describe 'GET /index' do
     before do
       current_user = User.first
-      current_user.confirm if current_user.confirmed_at == nil
+      current_user.confirm if current_user.confirmed_at.nil?
       sign_in current_user
       @recipe = Recipe.first
       get "/recipes/#{@recipe.id}"
@@ -36,4 +36,3 @@ RSpec.describe 'Recipes', type: :request do
     end
   end
 end
-

@@ -14,6 +14,6 @@ User.create!([
 
    #Create some recipes
 Recipe.create!([
-    {name: 'Cake', description: 'Delicious cake recipe', preparation_time: 30.3, cooking_time: 40, public: true, user_id: 1}
+    {name: 'Cake', description: 'Delicious cake recipe', preparation_time: 30.3, cooking_time: 40, public: true, user_id: 1},
     {name: 'Pizza', description: 'Delicious Pizza recipe', preparation_time: 30.3, cooking_time: 40, public: false, user_id: 1}
 ])

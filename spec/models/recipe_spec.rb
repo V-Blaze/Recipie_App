@@ -4,7 +4,10 @@ require 'spec_helper'
 RSpec.describe Recipe, type: :model do
   current_user = User.first
 
-  subject {Recipe.new(name: 'Pizza', description: 'All the best description', cooking_time: 30, preparation_time: 30, public: true, user: current_user)}
+  subject do
+    Recipe.new(name: 'Pizza', description: 'All the best description', cooking_time: 30, preparation_time: 30,
+               public: true, user: current_user)
+  end
 
   before { subject.save }
 
@@ -26,7 +29,7 @@ RSpec.describe Recipe, type: :model do
   end
 
   it 'should return only Recipes with the public attibute set to true' do
-    # expect(Recipe.public_recipes_ordered_by_newest.count).to eq(1)
+    expect(Recipe.public_recipes_ordered_by_newest.count).to eq(2)
   end
 
   it 'should return only Recipes created by the current user' do
@@ -35,6 +38,4 @@ RSpec.describe Recipe, type: :model do
 
     expect(current_user_id).to eq(current_user.id)
   end
-
-
 end

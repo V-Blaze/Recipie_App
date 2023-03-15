@@ -45,7 +45,7 @@ RSpec.configure do |config|
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
 
-  #Configure Devise authentication gem
+  # Configure Devise authentication gem
   # config.include Devise::Test::ControllerHelpers, type: :controller
 
   # RSpec Rails can automatically mix in different behaviours to your tests
@@ -73,8 +73,8 @@ RSpec.configure do |config|
       args: ''
       # args: %w[headless disable-gpu no-sandbox]
     )
-    Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+    Capybara::Selenium::Driver.new(app, browser: :chrome, options:)
   end
-  
+
   Capybara.javascript_driver = :selenium_chrome_headless
 end

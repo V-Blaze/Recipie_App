@@ -12,7 +12,7 @@
             <th>Actions</th>
         </tr>
         <% @user.foods.each do |food| %>
-            <tr>
+            <tr class='item_detail'>
                 <td><%= food.name %></td>
                 <td><%= food.measurement_unit %></td>
                 <td>$<%= food.price %></td>

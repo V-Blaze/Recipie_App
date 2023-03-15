@@ -6,7 +6,7 @@
     <% @recipes.each do |recipe| %>
         <li> 
         <%= recipe.name %> 
-        <%= link_to 'show', recipe_path(recipe.user_id) %>
+        <%= link_to 'show', recipe_path(recipe.id) %>
         </li>
     <% end %>    
   </ul>

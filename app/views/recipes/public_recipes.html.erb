@@ -1,0 +1,13 @@
+<h1>Public Recipes</h1>
+<% if @recipes.empty? %>
+  <h2> No public recipes available </h2>
+<% else %>
+  <ul>
+    <% @recipes.each do |recipe| %>
+        <li> 
+        <%= recipe.name %> 
+        <%= link_to 'show', recipe_path(recipe.id) %>
+        </li>
+    <% end %>    
+  </ul>
+<% end %>

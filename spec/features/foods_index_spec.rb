@@ -30,7 +30,7 @@ RSpec.feature 'Recipes#index view', type: :feature do
     expect(page).to have_css('.item_detail td a')
   end
 
-   scenario 'delete food by clicking on delete button' do
+  scenario 'delete food by clicking on delete button' do
     food = @current_user.foods[1]
     delete = page.all('.item_detail td a')[1]
     delete.click

@@ -26,10 +26,10 @@ RSpec.describe 'Foods', type: :request do
       get '/foods'
     end
 
-   it 'includes placeholder text' do
+    it 'includes placeholder text' do
       expect(response.body).to include('Foods Page')
     end
-   
+
     it 'includes placeholder text' do
       expect(response.body).to include('Add Food')
     end

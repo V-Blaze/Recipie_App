@@ -24,5 +24,4 @@ RSpec.describe Food, type: :model do
   it 'Subject should be valid' do
     expect(subject).to be_valid
   end
-  
 end

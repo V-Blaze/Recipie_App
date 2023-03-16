@@ -3,7 +3,7 @@ require 'capybara/rspec'
 
 base_url = 'http://localhost:3000'
 
-RSpec.feature 'Recipes#show view', type: :feature, js: true do
+RSpec.feature 'Recipes#show view', type: :feature do
   before(:each) do
     @current_user = User.first
     @current_user.confirm if @current_user.confirmed_at.nil?

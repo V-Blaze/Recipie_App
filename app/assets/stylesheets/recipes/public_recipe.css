@@ -1,0 +1,28 @@
+.public-recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-public-recipe {
+    text-align: center;
+    font-style: italic;
+    color: #1463F3;
+
+    /* background: #173F4E;
+    color: #CCD0D8;
+    background: #1463F3; */;
+}
+
+.public-recipe-div {
+    /* background-color: #CCD0D8; */
+
+}
+
+.public-recipe-item {
+    background-color: #CCD0D8;
+    border: solid #173F4E 1px;
+    border-radius: 10px;
+    width: 100%;
+
+}

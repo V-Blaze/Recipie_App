@@ -33,7 +33,7 @@
         </div>
         <div>
             <% if @recipe.user == current_user %>
-                <%= link_to 'Generate shoping list', "" %>
+                <%= link_to 'Generate shoping list', "/shopping_list/#{@recipe.id}" %>
             <% end %>
         </div>
         <div>

@@ -1,39 +1,38 @@
 .public-recipe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .no-public-recipe {
-    text-align: center;
-    font-style: italic;
-    color: #1463F3;
+  text-align: center;
+  font-style: italic;
+  color: #1463f3;
 }
 
 .public-recipe-div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .public-recipe-item {
-    display: flex;
-    justify-content: space-between;
-    background-color: #CCD0D8;
-    border: solid #173F4E 1px;
-    border-radius: 10px;
-    width: 50%;
-    padding: 0.2rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ccd0d8;
+  border: solid #173f4e 1px;
+  border-radius: 10px;
+  width: 50%;
+  padding: 0.2rem 0.8rem;
 }
 
 .pubic-recipe-info h3 a {
-    text-decoration: none;
-    color: #1463F3;
-    font-weight: bold;
-    font-size: 1.5rem;
+  text-decoration: none;
+  color: #1463f3;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .pubic-recipe-info span {
@@ -41,8 +40,7 @@
 }
 
 .pubic-recipe-info h3 a:hover {
-    text-decoration: none;
-    color: green;
-    font-weight: bolder;
-
+  text-decoration: none;
+  color: green;
+  font-weight: bolder;
 }

@@ -1,0 +1,138 @@
+.show-recipe-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.show-recipe-main {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.recipe-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 1.9rem;
+    width: 80%;
+    border: solid 1px #1463F3;
+    border-radius: 15px;
+    background: #173F4E;
+    padding: 0 0.4rem;
+    color: #CCD0D8;
+    gap: 5%;
+    margin-bottom: 2.8rem;
+}
+
+.recipe-info-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 0.6rem;
+    /* align-items: center; */
+}
+
+.edit_recipe .btn-primary {
+    background: green;
+    border-radius: 5px;
+    padding: 0.2rem 0.3rem;
+    margin-right: 0.3rem;
+    border: none;
+    color: white;
+}
+
+.show-recipe-actions a {
+    background: #1463F3;
+    border-radius: 5px;
+    padding: 0.2rem 0.3rem;
+    margin-right: 0.3rem;
+    border: none;
+    color: white;
+}
+
+.show-recipe-g-shoping a {
+    text-decoration: none;
+    background: #1463F3;
+    border-radius: 5px;
+    padding: 0.2rem 0.3rem;
+    margin-right: 0.3rem;
+    border: none;
+    color: white;
+}
+
+.show-recipe-add-ingredient a {
+    text-decoration: none;
+    background: green;
+    border-radius: 5px;
+    padding: 0.2rem 0.3rem;
+    margin-right: 0.3rem;
+    border: none;
+    color: white;
+}
+
+.show-btns-div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 1.9rem;
+    width: 80%;
+    border: solid 1px #CCD0D8;
+    border-radius: 15px;
+    padding: 0 0.4rem;
+    gap: 5%;
+    margin-bottom: 2.8rem;
+}
+
+.recipe-food-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.9rem;
+    width: 80%;
+    margin-bottom: 2.8rem;
+}
+
+.recipe-food-table {
+    width: 100%;
+    border: solid 1px #1463F3;
+    border-radius: 15px;
+    background: #173F4E;
+    color: #CCD0D8;
+}
+
+.recipe-food-table-row {
+    border: solid 1px blue;
+}
+
+.recipe-food-tbody-tr {
+text-align: center;
+}
+
+.td-action-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.td-action-btns a {
+    text-decoration: none;
+    background: green;
+    border-radius: 5px;
+    padding: 0.2rem 0.3rem;
+    margin-right: 0.3rem;
+    border: none;
+    color: white;
+}
+
+.td-action-btns button {
+    background: red;
+    border-radius: 5px;
+    padding: 0.2rem 0.3rem;
+    margin-right: 0.3rem;
+    border: none;
+    color: white;
+}

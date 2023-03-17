@@ -1,9 +1,9 @@
-<div class="">
-    <h2 class="">
+<div class="shopping_des">
+    <h2>
        Shopping List
     </h2>
 
-    <div class="">
+    <div class="amount_total">
        <div class="">
            Amount of food items to buy: <%= @ingredient.length %>
        </div>
@@ -12,10 +12,10 @@
        </div>
     </div>
  </div>
- <div class="">
-    <table class="">
+ <div>
+    <table class='main_table'>
       <thead>
-        <tr class="">
+        <tr>
           <th>Food</th>
           <th>Quantity</th>
           <th>Price</th>
@@ -23,7 +23,7 @@
       </thead>
       <tbody>
         <% if @ingredient.length === 0 %>
-        <tr class="">
+        <tr>
           <td colspan="">
             <i class=""></i>
             <span>No ingredients found</span>
@@ -31,7 +31,7 @@
         </tr>
         <% else %>
           <% @ingredient.each do |ingt| %>
-            <tr class="">
+            <tr class="item_detail">
               <td><%= ingt.food.name %></td>
               <td><%= ingt.quantity %> <%= ingt.food.measurement_unit %></td>
               <td><%= ingt.food.price * ingt.quantity %></td>

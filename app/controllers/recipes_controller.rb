@@ -45,6 +45,11 @@ class RecipesController < ApplicationController
     @recipes = Recipe.public_recipes_ordered_by_newest
   end
 
+  def shopping_list
+    @ingredient = RecipeFood.includes(:food).where(recipe_id: params[:recipe_id])
+    @total_price = @ingredient.inject(0) { |sum, e| sum + (e.food.price * e.quantity) }
+  end
+
   private
 
   def recipe_params

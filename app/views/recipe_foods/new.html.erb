@@ -1,0 +1,25 @@
+<div>
+    <% if @foods %>    
+        <%= form_with( url: "/recipe_foods/#{@recipe_id}", method: :post) do |f| %>
+            <div>
+                <%= f.label :food_id, style: "display: block" %>
+                <%= f.select :food_id, @foods.map { |food| [food.name, food.id] } %>
+            </div>
+
+            <div>
+                <%= f.label :quantity %> <br>
+                <%= f.number_field :quantity, step: 1 %>
+            </div>
+
+            <div>
+                <%= f.submit %>
+            </div>
+        <% end %>
+    <% else %>
+        <div>
+            <span>You Dont Have any food yet to select from</span>
+            <%= link_to 'Foods', foods_path %>
+        </div>
+    <% end %>
+
+</div>

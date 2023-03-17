@@ -1,25 +1,24 @@
-.public-recipe {
+.recipie-section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.no-public-recipe {
+.no-recipe {
     text-align: center;
     font-style: italic;
     color: #1463F3;
 }
 
-.public-recipe-div {
+.index-recipe-div {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-
 }
 
-.public-recipe-item {
+.recipie-main {
     display: flex;
     justify-content: space-between;
     background-color: #CCD0D8;
@@ -29,20 +28,39 @@
     padding: 0.2rem 0.8rem;
 }
 
-.pubic-recipe-info h3 a {
+.recipie-name a {
     text-decoration: none;
     color: #1463F3;
     font-weight: bold;
     font-size: 1.5rem;
 }
 
-.pubic-recipe-info span {
-  font-style: italic;
+.recipie-main .button_to button {
+    background: red;
+    border-radius: 5px;
+    padding: 0.2rem 0.3rem;
+    margin-right: 0.3rem;
+    border: none;
+    color: white;
 }
 
-.pubic-recipe-info h3 a:hover {
+.add-recipe-btn {
+    margin: 1rem 0;
+    align-self: end;
+    margin-right: 15%;
+    
+}
+.add-recipe-btn a {
     text-decoration: none;
-    color: green;
-    font-weight: bolder;
+    background: green;
+    border-radius: 5px;
+    padding: 0.2rem 0.3rem;
+    margin-right: 0.3rem;
+    border: none;
+    color: white;
 
+}
+
+.recipie-name a:hover {
+    color: green;
 }

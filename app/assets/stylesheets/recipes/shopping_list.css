@@ -1,0 +1,23 @@
+.shopping_des {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.shopping_des h2 {
+  font-size: 27px;
+  font-family:
+    "Trebuchet MS",
+    "Lucida Sans Unicode",
+    "Lucida Grande",
+    "Lucida Sans",
+    Arial,
+    sans-serif;
+}
+
+.amount_total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 21px;
+}

@@ -1,6 +1,5 @@
-<div>
-  <h1>Foods Page</h1>
-  <%= link_to 'Add Food', new_food_path %>
+<div class='food_container'>
+  <%= link_to 'Add Food', new_food_path, class: 'add_food' %>
   <% if @user.foods.empty? %>
     <h2> No foods for this user.</h2>
   <% else %>

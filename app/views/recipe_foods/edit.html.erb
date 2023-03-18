@@ -1,0 +1,20 @@
+<div class='add_food_container'>
+    <% if @foods %>    
+        <%= form_with( url: "/recipe_foods/#{@recipe_food.recipe_id}", method: :patch) do |f| %>
+            <div class='input_label'>
+                <%= f.label :food_id, style: "display: block" %>
+                <%= f.select :food_id, @foods.map { |food| [food.name, food.id] } %>
+            </div>
+
+            <div class='input_label'>
+                <%= f.label :quantity %> <br>
+                <%= f.number_field :quantity, :value => @recipe_food.quantity, min: 1 %>
+            </div>
+
+            <div>
+                <%= f.submit( class: "food_add_btn") %>
+            </div>
+        <% end %>
+    <% end %>
+
+</div>

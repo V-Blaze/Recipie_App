@@ -1,0 +1,29 @@
+<div class="recipie-section">
+    <div class="add-recipe-btn">
+        <%= link_to 'Add Recipe', new_recipe_path%>
+    </div>
+    <% if @recipes.empty? %>
+        <h3 class="no-recipe">You Don't have any recipes Yet</h3>
+    <% else %>
+
+        <div class="index-recipe-div">
+            <% @recipes.each do |recipe| %>
+                <div class="recipie-main">
+                    <div class="recipie-title">
+                        <h2 class="recipie-name">
+                            <%= link_to(recipe.name, recipe_path(recipe)) %>
+                        </h2>
+                        <% if can? :destroy, recipe %>
+                            <%= button_to "Remove", recipe_path(recipe), method: :delete, class: 'Delete-btn' %>
+                        <% end %>
+                    </div>
+                    <div class="recipie-details">
+                        <p class="recipie-description">
+                            <%= recipe.description %>
+                        </p>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    <% end %>
+</div>

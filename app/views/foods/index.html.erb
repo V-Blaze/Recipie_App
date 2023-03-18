@@ -1,0 +1,24 @@
+<div class='food_container'>
+  <%= link_to 'Add Food', new_food_path, class: 'add_food' %>
+  <% if @user.foods.empty? %>
+    <h2> No foods for this user.</h2>
+  <% else %>
+    <table class='main_table'>
+        <tr>
+            <th>Food</th>
+            <th>Measurement Unit</th>
+            <th>Unit Price</th>
+            <th>Actions</th>
+        </tr>
+        <% @user.foods.each do |food| %>
+            <tr class='item_detail'>
+                <td><%= food.name %></td>
+                <td><%= food.measurement_unit %></td>
+                <td>$<%= food.price %></td>
+                <td><%= link_to 'delete', food_path(food), data: {turbo_method: :delete} %></td>
+            </tr>
+        <% end %>
+    </table>
+      
+  <% end %>
+</div>

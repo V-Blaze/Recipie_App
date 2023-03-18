@@ -1,0 +1,28 @@
+<nav class="nav-bar">
+    <div class="main-logo">
+        <h1>Recipe App</h1>
+    </div>
+    <div class="navlink-div">
+        <ul class="navlink-ul">
+            <% if user_signed_in? %>
+                <li><%= link_to 'Recipes', recipes_path %></li>
+                <li><%= link_to 'Foods', foods_path %></li>
+                <li><%= link_to 'Public-Recipes', '/public_recipes' %></li>
+            <% else %>
+                <li><%= link_to 'Public Recipes', '/public_recipes' %></li>
+            <% end %>
+        </ul>
+    </div>
+    <div class="nav-bar-user">
+        <% if user_signed_in? %>
+            <h3>
+                Hello <span><%= current_user.name%></span>
+            </h3>
+            <%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete }, class: 'nav-sign-out-btn' %>
+        <% else %>
+            <%= link_to 'Sign up', new_user_registration_path, class: 'nav-sign-up-btn' %>
+            <%= link_to 'Sign in',  new_user_session_path, class: 'nav-sign-in-btn' %>
+        <% end %>
+    </div>
+</nav>
+

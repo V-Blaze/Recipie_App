@@ -1,0 +1,79 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #173f4e;
+  padding: 0 0.4rem;
+  color: #ccd0d8;
+}
+
+.navlink-ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  color: #ccd0d8;
+}
+
+.nav-bar-user a {
+  color: #ccd0d8;
+  text-decoration: none;
+}
+
+.navlink-ul li {
+  list-style: none;
+  color: #ccd0d8;
+  margin-right: 0.4rem;
+}
+
+.navlink-ul li a {
+  color: #ccd0d8;
+  text-decoration: none;
+}
+
+.nav-bar-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  color: #ccd0d8;
+}
+
+.nav-sign-up-btn {
+  background: #1463f3;
+  border-radius: 5px;
+  padding: 0.2rem 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.nav-sign-in-btn {
+  background: green;
+  border-radius: 5px;
+  padding: 0.2rem 0.3rem;
+}
+
+.nav-sign-in-btn:hover,
+.nav-sign-up-btn:hover {
+  background: #000;
+  border: solid white 1px;
+}
+
+.navlink-ul li a:hover {
+  color: green;
+}
+
+.nav-sign-out-btn {
+  background: red;
+  border-radius: 5px;
+  padding: 0.2rem 0.3rem;
+  margin-left: 0.4rem;
+}
+
+.nav-sign-out-btn:hover {
+  background: brown;
+  color: white;
+}
+
+.nav-bar-user span {
+  color: white;
+}
